@@ -1,0 +1,78 @@
+body * {
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  border-bottom: 2px solid orange;
+}
+header svg {
+  width: 100%;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid orange;
+  overflow: hidden;
+}
+.addGap {
+  display: flex;
+  gap: 0.5rem;
+}
+p {
+  max-width: 30rem;
+}
+img {
+  max-width: 300px;
+}
+
+svg {
+  color: #fff;
+  font-weight: 600;
+}
+.iconSize {
+  width: 20px;
+}
+.mainBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: #03a9f4;
+  border-radius: 10px;
+  padding: 0.75rem;
+  border: none;
+  font-size: medium;
+  color: #fff;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.75rem;
+  border: none;
+  font-size: medium;
+  color: #03a9f4;
+  cursor: pointer;
+}
+
+.mainBtn:hover {
+  background-color: #4cc4fc;
+}
+
+@media only screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+}
