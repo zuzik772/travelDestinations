@@ -21,6 +21,7 @@ async function connectToDB(destinationData, res) {
     await client.connect();
     const myDB = client.db("travelDestinations");
     const myColl = myDB.collection("destinations");
+    console.log(myColl);
     const result = await addDataToDatabase(destinationData, res);
     await client.db("admin").command({ ping: 1 });
     console.log(
@@ -45,7 +46,6 @@ async function connectToDB(destinationData, res) {
 
 //Inserts one doc in the database
 async function addDataToDatabase(destinationData, myColl) {
-  //once again the parsed body
   const result = await myColl.insertOne(destinationData);
   return result;
 }
