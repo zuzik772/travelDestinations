@@ -29,21 +29,14 @@ async function addDestination(event) {
     description,
   };
 
-  console.log("obj", obj);
-  //   const dataArray=[]
-  //   dataArray.push(obj)
-
+  const dataArray = [];
+  dataArray.push(obj);
+  console.log("dataArray", dataArray);
   const response = await saveToDatabase(obj);
   if (response.ok) {
     const body = await response.json();
     console.log("our body is:", body);
-    //   const newP = document.createElement("p");
-    //   newP.classList.add("user");
-    //   newP.title = newDateInRequestedFormat();
-    //   newP.id = body.name;
-    //   newP.innerText = message;
-    //   messages.appendChild(newP);
-    //   input.value = "";
+    input.value = "";
   }
   if (response.status > 499) {
     alert("Server not working");
